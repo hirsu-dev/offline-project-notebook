@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#e9ecf1" />
+    <meta
+      name="description"
+      content="Fieldnotes: a local project notebook with photos, checklists, wiring diagrams and offline app caching. No account or cloud sync required."
+    />
+    <title>Fieldnotes / Offline Project Notebook</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to notebook</a>
+    <header>
+      <a class="brand" href="https://hrushikbarani-hub.github.io/"
+        >▱ FIELDNOTES<span>BY HIRSU</span></a
+      ><span id="offline-status">Opening local notebook…</span>
+      <div>
+        <button id="backup">Export backup</button
+        ><label class="restore"
+          >Restore<input
+            id="restore"
+            type="file"
+            accept="application/json,.json"
+        /></label>
+      </div>
+    </header>
+    <main id="main">
+      <aside>
+        <button id="new-note" class="primary">+ New project note</button
+        ><label
+          >Search your notebook<input
+            id="query"
+            type="search"
+            maxlength="100"
+            placeholder="Title, project, tag, text…" /></label
+        ><label
+          >Project<select id="project">
+            <option value="all">All projects</option>
+          </select></label
+        ><label class="check"
+          ><input id="trash" type="checkbox" />Show trash</label
+        >
+        <p id="count"></p>
+        <div id="note-list"></div>
+        <button id="purge" hidden>Empty trash</button>
+        <p class="aside-note">
+          Notes and photos stay in this browser. Export a backup before clearing
+          site data. No account or automatic cloud sync.
+        </p>
+      </aside>
+      <section class="workspace">
+        <p id="message" role="status"></p>
+        <div id="editor"></div>
+      </section>
+    </main>
+    <footer>
+      <span>LOCAL FIRST / NOTES, TASKS & WIRING IDEAS</span
+      ><a href="https://github.com/hrushikbarani-hub/offline-project-notebook"
+        >Source, offline behavior & setup ↗</a
+      >
+    </footer>
+  </body>
+</html>

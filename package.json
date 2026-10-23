@@ -1,0 +1,13 @@
+{
+  "name": "offline-project-notebook",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check web/app.js && node --check web/worker.js && node --test tests/*.test.js"
+  },
+  "devDependencies": {
+    "happy-dom": "21.0.4",
+    "fake-indexeddb": "6.2.4"
+  }
+}
