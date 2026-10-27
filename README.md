@@ -41,7 +41,7 @@ python -m http.server 8148 --bind 127.0.0.1 --directory web
 
 Open `http://127.0.0.1:8148`. Node.js 22+ is required for development checks only. The app has no runtime npm dependency.
 
-Checks cover stale-edit rejection, backup/photo round trips, invalid-import rollback, diagram limits, service-worker scope/cache cleanup/offline navigation fallback and the actual editor/task/diagram workflow. Visual browser, device storage-quota and real offline-reload QA were unavailable during this release; the worker's logic checks do not replace trying a real offline visit.
+Checks cover stale-edit rejection, backup/photo round trips, invalid-import rollback, diagram limits, service-worker scope/cache cleanup/offline navigation fallback and the actual editor/task/diagram workflow. Visual browser, device storage-quota and real offline-reload testing remain outstanding; the worker's logic checks do not replace an offline visit.
 
 `web/model.js` validates note data and diagram geometry. `web/store.js` owns the two IndexedDB stores and backup encoding. `web/app.js` renders the notebook. GitHub Actions checks the source and deploys only `web` to free GitHub Pages.
 
