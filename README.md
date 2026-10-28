@@ -1,6 +1,6 @@
 # Fieldnotes: Offline Project Notebook
 
-Keep project notes, tasks, photos and wiring ideas together. [Open the notebook](https://hrushikbarani-hub.github.io/offline-project-notebook/).
+Keep project notes, tasks, photos and wiring ideas together. [Open the notebook](https://hirsu-dev.github.io/offline-project-notebook/).
 
 The app stores records in IndexedDB on this browser. It has no account, automatic cloud sync, analytics, upload service or API key. A service worker caches the app shell after the first successful online load so it can reopen without a connection.
 
@@ -45,4 +45,4 @@ Checks cover stale-edit rejection, backup/photo round trips, invalid-import roll
 
 `web/model.js` validates note data and diagram geometry. `web/store.js` owns the two IndexedDB stores and backup encoding. `web/app.js` renders the notebook. GitHub Actions checks the source and deploys only `web` to free GitHub Pages.
 
-Built by [hirsu](https://hrushikbarani-hub.github.io/) for software, telescope and Raspberry Pi build notes.
+Built by [hirsu](https://hirsu-dev.github.io/) for software, telescope and Raspberry Pi build notes.
